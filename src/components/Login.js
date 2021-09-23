@@ -41,16 +41,16 @@ const Login = () => {
     },
   });
   const [signup] = useMutation(SIGNUP_MUTATION, {
-      variables: {
-          name: formState.name,
-          email: formState.name,
-          password: formState.password
-      },
-      onCompleted: ({signup}) => {
-          localStorage.setItem(AUTH_TOKEN, signup.token);
-          history.push('/')
-      }
-  })
+    variables: {
+      name: formState.name,
+      email: formState.name,
+      password: formState.password,
+    },
+    onCompleted: ({ signup }) => {
+      localStorage.setItem(AUTH_TOKEN, signup.token);
+      history.push("/");
+    },
+  });
 
   return (
     <div>
