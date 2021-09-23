@@ -30,7 +30,21 @@ const Header = () => {
         )}
       </div>
       <div className="flex flex-fixed">
-          {authToken ? (<div className="ml1 pointer black" onClick={() => {localStorage.removeItem(AUTH_TOKEN); history.push("/")}} >logout</div>) : (<Link to="/login" className="ml1 no-underline black">login</Link>)}
+        {authToken ? (
+          <div
+            className="ml1 pointer black"
+            onClick={() => {
+              localStorage.removeItem(AUTH_TOKEN);
+              history.push("/");
+            }}
+          >
+            logout
+          </div>
+        ) : (
+          <Link to="/login" className="ml1 no-underline black">
+            login
+          </Link>
+        )}
       </div>
     </div>
   );
