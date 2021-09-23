@@ -1,9 +1,9 @@
-import React from 'react';
-import LinkList from './LinkList';
-import logo from '../logo.svg';
-import '../styles/App.css';
-import CreateLink from './CreateLink';
-import {Switch, Route} from 'react-router-dom';
+import React from "react";
+import LinkList from "./LinkList";
+import logo from "../logo.svg";
+import "../styles/App.css";
+import CreateLink from "./CreateLink";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         </Switch>
       </div>
     </div>
-  )
+  );
 }
 
 export default App;
