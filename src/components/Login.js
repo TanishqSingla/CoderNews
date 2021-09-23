@@ -1,20 +1,18 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
   const history = useHistory();
   const [formState, setFormState] = useState({
     login: true,
-    email: '',
-    password: '',
-    name: ''
+    email: "",
+    password: "",
+    name: "",
   });
 
   return (
     <div>
-      <h4 className="mv3">
-        {formState.login ? 'Login' : 'Sign Up'}
-      </h4>
+      <h4 className="mv3">{formState.login ? "Login" : "Sign Up"}</h4>
       <div className="flex flex-column">
         {!formState.login && (
           <input
@@ -22,7 +20,7 @@ const Login = () => {
             onChange={(e) =>
               setFormState({
                 ...formState,
-                name: e.target.value
+                name: e.target.value,
               })
             }
             type="text"
@@ -34,7 +32,7 @@ const Login = () => {
           onChange={(e) =>
             setFormState({
               ...formState,
-              email: e.target.value
+              email: e.target.value,
             })
           }
           type="text"
@@ -45,7 +43,7 @@ const Login = () => {
           onChange={(e) =>
             setFormState({
               ...formState,
-              password: e.target.value
+              password: e.target.value,
             })
           }
           type="password"
@@ -55,22 +53,22 @@ const Login = () => {
       <div className="flex mt3">
         <button
           className="pointer mr2 button"
-          onClick={() => console.log('onClick')}
+          onClick={() => console.log("onClick")}
         >
-          {formState.login ? 'login' : 'create account'}
+          {formState.login ? "login" : "create account"}
         </button>
         <button
           className="pointer button"
           onClick={(e) =>
             setFormState({
               ...formState,
-              login: !formState.login
+              login: !formState.login,
             })
           }
         >
           {formState.login
-            ? 'need to create an account?'
-            : 'already have an account?'}
+            ? "need to create an account?"
+            : "already have an account?"}
         </button>
       </div>
     </div>
