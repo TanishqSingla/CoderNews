@@ -3,6 +3,7 @@ import LinkList from "./LinkList";
 import logo from "../logo.svg";
 import "../styles/App.css";
 import CreateLink from "./CreateLink";
+import Header from "./Header";
 import { Switch, Route } from "react-router-dom";
 
 function App() {
